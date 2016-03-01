@@ -1,24 +1,24 @@
 <div ng-show="homepage" class="home">
-	<h1>chatApp</h1>
-	<input ng-model="user" ng-change="url()" placeholder="User" type="text" value="Sergey"/>
-	<div class="loginIn" ng-click="changeWindow()">Sign In</div>
+  <h1>chatApp</h1>
+  <input ng-model="user" ng-change="url()" placeholder="User" type="text" value="Sergey"/>
+  <div class="loginIn" ng-click="changeWindow()">Sign In</div>
 </div>
 <div ng-hide="homepage">
-	<div class="chat-container">
-		<div class="chat-messages">
-			<div ng-repeat="message in messageData">
-				<div ng-class="{'sent-message-true': message.user === user, 'sent-message-false': message.user != user}">
-					<span>{{message.user}}:</span>{{message.msg}}
-				</div>
-				<div ng-class="{'sent-message-true': message.user === user, 'sent-message-false': message.user != user}">{{message.time}}</div>
-				<div class="clear"></div>
-			</div>
-		</div>
-		<form ng-submit="showData()" class="chat-input">
-			<input type="text" ng-model="msg" placeholder="Message" autofocus>
-			<input type="submit" class="send-icon" value=" ">
-			<input type="submit" value=" " class="sent-indicator {{chat.status}}">
-		</form>
-	</div> 
-	<p class="button" ng-click="changeWindow()">Sign Out</p>
+  <div class="chat-container">
+    <div class="chat-messages">
+      <div ng-repeat="message in messageData">
+        <div ng-class="{'sent-message-true': message.user === user, 'sent-message-false': message.user != user}">
+          <span>{{message.user}}:</span>{{message.msg}}
+	</div>
+        <div ng-class="{'sent-message-true': message.user === user, 'sent-message-false': message.user != user}">{{message.time}}</div>
+	<div class="clear"></div>
+      </div>
+    </div>
+    <form ng-submit="showData()" class="chat-input">
+      <input type="text" ng-model="msg" placeholder="Message" autofocus>
+      <input type="submit" class="send-icon" value=" ">
+      <input type="submit" value=" " class="sent-indicator {{chat.status}}">
+    </form>
+  </div> 
+  <p class="button" ng-click="changeWindow()">Sign Out</p>
 </div>	
