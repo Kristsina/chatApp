@@ -1,0 +1,172 @@
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+App Base
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+@media only screen and (min-device-width: 360px) and (max-device-height: 640px){}
+
+html, body, p{
+  outline: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  line-height: 1.4em;
+  font-weight: 400;
+  font-size: 16px;
+  overflow: hidden;
+	background: url(../img/image.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+}
+
+h1{ 
+	color: #1647E9;
+	text-align: center;
+  margin:30px 0px 100px 0px;
+}
+
+input{ 
+	cursor: pointer;
+  border: 1px solid rgba(32,40,70,0.4);
+  -moz-border-radius:7px;  
+  -webkit-border-radius:7px; 
+	text-align:center;
+  padding: 8px;
+}
+ 
+.home{ text-align: center }
+.clear { clear: both }
+
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Layout
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+div.chat-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+}
+
+div.chat-messages {
+  order: 1;
+  flex: 1;
+  overflow: scroll;
+  overflow-x: hidden;
+  padding-bottom: 20px;  
+}
+
+form.chat-input {
+  position: relative;
+  order: 2;
+  height: 60px;
+  background: rgba(233,234,243,0.4);
+}
+
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Chat Messages
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+div.sent-message-false {
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
+    border-radius: 2px;
+    display: inline-block;
+    color: rgba(32,40,70,0.9);
+    padding: 14px;
+    border: 1px solid rgba(32,40,70,1.0);
+    font-size: 0.8em;
+    font-weight: 400;
+    background: rgba(151,255,255,0.5);
+    animation: received-message 0.9s ease-out 0s; 
+		-moz-border-radius:10px;  
+		-webkit-border-radius:10px; 
+}
+div.sent-message-true {
+    float: right;
+    margin-top: 10px;
+    margin-right: 10px;
+    border-radius: 2px;
+    display: inline-block;
+    color: rgba(32,40,70,0.9);
+    padding: 14px;
+    border: 1px solid rgba(32,40,70,1.0);
+    font-size: 0.8em;
+    font-weight: 400;
+    background: rgba(121,205,205,0.5);
+    animation: sent-message 0.9s ease-out 0s; 
+		-moz-border-radius:10px;  
+		-webkit-border-radius:10px; 
+}
+
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+User Input
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+form.chat-input input[type="text"] {
+  width: 80%;
+  color: rgba(32,40,70,0.9);
+  padding: 20px;
+  background: transparent;
+}
+
+form.chat-input input[type="submit"] {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  border-radius: 100px;
+  color: rgba(255,255,255,1.0);
+  width: 42px;
+  height: 42px;
+  overflow: hidden;
+}
+
+form.chat-input input[type="submit"].send-icon {
+	background: rgba(159,121,238,0.8) url(../img/send-icon.png);
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: 7px 8px;
+}
+
+form.chat-input input[type="submit"].sent-indicator {
+  opacity: 0;
+  background: rgba(144,134,251,0.97);
+  width: 42px;
+  height: 42px;
+}
+
+form.chat-input input[type="submit"].sending {
+  animation: send-indicator 0.9s ease-out 0s;
+}
+
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Button
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+
+.loginIn { 
+	background-color:#B0E0E6;
+	text-align: center;
+  border:2px solid #666666;
+  font-size:16px; 
+	position: absolute;
+	top: 200px;
+	right: 50%;   
+  width:80px;   
+  -moz-border-radius:10px;  
+  -webkit-border-radius:10px;
+}
+
+.button {	
+	background-color:#B0E0E6;
+	text-align: center;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+  border:2px solid #666666;
+  font-size:16px;    
+  width:100px;   
+  -moz-border-radius:10px;  
+  -webkit-border-radius:10px;  
+}
