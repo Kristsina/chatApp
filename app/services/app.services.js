@@ -18,7 +18,7 @@
 			datetime = new Date();
 			message = '{"user":"'+user+'","msg":"'+msg+'","timestamp":"'+datetime.getTime()+'"}';
 			//return $http.get('app/services/json.php?msg=' + message);  -- для бэкэнда
-			alert('Working version of this application: http://j296223m.bget.ru/');
+			alert('Chat with Back-end: http://j296223m.bget.ru/');
 			return true;
 		};
 	};
