@@ -3,7 +3,6 @@ function getData ($scope, $http, httpService, $timeout ) {
   var updateTime = 0;
   $scope.homepage = true;
   $scope.showData = function (){
-    var user = "Anonymous";
     httpService.postMessage($scope.user, $scope.msg);
     $scope.msg = "";
     console.log("Sended");
