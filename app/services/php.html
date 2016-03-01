@@ -1,16 +1,15 @@
 <html>
-	<script>
-		function getData(){
-			
-			var x = new XMLHttpRequest();
-			x.open("GET", "json.php?function=clear", true);
-			x.onload = function (){
-				console.log( x.responseText);
-			}
-			x.send(null);
-		}
-	</script>
-	<body>
-		<button onclick="getData()">Clear</button>
-	</body>
+  <script>
+    function getData(){
+      var x = new XMLHttpRequest();
+      x.open("GET", "json.php?function=clear", true);
+      x.onload = function (){
+        console.log( x.responseText);
+      }
+      x.send(null);
+    }
+  </script>
+  <body>
+    <button onclick="getData()">Clear</button>
+  </body>
 </html>
