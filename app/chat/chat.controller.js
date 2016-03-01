@@ -13,7 +13,7 @@ function getData ($scope, $http, httpService, $timeout ) {
     if (typeof $scope.user == 'undefined') {$scope.user = "Anonymous"};
   }
 		
-  scope.messageData = [];
+  $scope.messageData = [];
   $scope.load = function (){
     httpService.getHistory(updateTime).then(success, error);
     function success(responce){
